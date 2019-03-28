@@ -10,11 +10,15 @@ function onLoad() {
      
     }else if(['c','C'].includes(przycisk)){
      stanWyniku = '0';
+    }else if(przycisk === 'Backspace'){
+     stanWyniku = stanWyniku.slice(0,-1);
     }
-   
     if(stanWyniku[0] === '0' && !['.',','].includes(stanWyniku[1]) && stanWyniku.length !== 1){
      stanWyniku = stanWyniku.slice(1);
      
+    }
+    if(stanWyniku.length <= 0 ){
+     stanWyniku = '0';
     }
     render();
   }
