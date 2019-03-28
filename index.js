@@ -12,6 +12,8 @@ function onLoad() {
      stanWyniku = '0';
     }else if(przycisk === 'Backspace'){
      stanWyniku = stanWyniku.slice(0,-1);
+    }else if(przycisk === '+'){
+
     }
     if(stanWyniku[0] === '0' && !['.',','].includes(stanWyniku[1]) && stanWyniku.length !== 1){
      stanWyniku = stanWyniku.slice(1);
